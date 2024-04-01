@@ -1,6 +1,5 @@
 package com.simplenotes.model.dto;
 
-import com.simplenotes.model.entity.UserEntity;
 import lombok.*;
 
 import java.time.LocalDateTime;
@@ -12,8 +11,8 @@ import java.time.LocalDateTime;
 @EqualsAndHashCode
 public class NoteDto {
     private Long id;
-    private String title;
-    private String content;
+    private String noteTitle;
+    private String noteContent;
     private Long userId;
-    private LocalDateTime createdAt;
+    private LocalDateTime creationTime;
 }

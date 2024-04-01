@@ -7,6 +7,7 @@ import com.simplenotes.model.entity.NoteEntity;
 import com.simplenotes.model.repository.NoteRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.TestInstance;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.jdbc.Sql;
 
@@ -18,7 +19,6 @@ public class NoteMapperTest extends IntegrationTestDatabase {
     private NoteMapper mapper;
 
     @Test
-    @Sql({"classpath:db/changelog/db.changelog-1.2.sql"})
     public void noteEntityToDtoTest() {
 
         NoteEntity entity = noteRepository.getReferenceById(1L);
@@ -27,8 +27,8 @@ public class NoteMapperTest extends IntegrationTestDatabase {
 
         Assertions.assertEquals(entity.getId(), dto.getId());
         Assertions.assertEquals(entity.getUser().getId(), dto.getUserId());
-        Assertions.assertEquals(entity.getContent(), dto.getContent());
-        Assertions.assertEquals(entity.getTitle(), dto.getTitle());
-        Assertions.assertEquals(entity.getCreatedAt(), dto.getCreatedAt());
+        Assertions.assertEquals(entity.getContent(), dto.getNoteContent());
+        Assertions.assertEquals(entity.getTitle(), dto.getNoteTitle());
+        Assertions.assertEquals(entity.getCreatedAt(), dto.getCreationTime());
     }
 }
