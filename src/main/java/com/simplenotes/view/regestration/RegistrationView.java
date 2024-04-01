@@ -26,8 +26,7 @@ import org.springframework.context.ApplicationEventPublisher;
 @Route("registration")
 @PageTitle("Registration")
 @AnonymousAllowed
-@Theme(variant = Lumo.DARK)
-public class RegistrationView extends VerticalLayout implements AppShellConfigurator {
+public class RegistrationView extends VerticalLayout{
     private final ApplicationEventPublisher publisher;
     TextField username = new TextField("Username", "JohnD");
     TextField firstName = new TextField("First name", "John");

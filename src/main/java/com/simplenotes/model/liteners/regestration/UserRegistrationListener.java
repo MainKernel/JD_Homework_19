@@ -1,4 +1,4 @@
-package com.simplenotes.model.liteners;
+package com.simplenotes.model.liteners.regestration;
 
 import com.simplenotes.model.dto.registration.RegistrationFormDto;
 import com.simplenotes.model.events.regestration.UserRegisteredEvent;
