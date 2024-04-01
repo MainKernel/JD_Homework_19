@@ -5,6 +5,7 @@ import com.simplenotes.database.IntegrationTestDatabase;
 import com.simplenotes.model.entity.NoteEntity;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
 import org.springframework.beans.factory.annotation.Autowired;
 
 
